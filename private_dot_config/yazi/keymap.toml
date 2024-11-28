@@ -351,3 +351,4 @@ desc = "Toggle tree/list dir preview"
 on   = [ "g", "i" ]
 run  = "plugin lazygit"
 desc = "run lazygit"
+
