@@ -97,6 +97,9 @@ function y() {
 	rm -f -- "$tmp"
 }
 
+alias lg="lazygit"
+alias lzd="lazydocker"
+
 
 # volta
 export VOLTA_HOME="$HOME/.volta"
