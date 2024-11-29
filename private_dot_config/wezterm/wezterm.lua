@@ -39,7 +39,7 @@ config.keys = {
 	},
 	{
 		mods = "LEADER",
-		key = "h",
+		key = "c",
 		action = wezterm.action.SplitHorizontal({ domain = "CurrentPaneDomain" }),
 	},
 	{
