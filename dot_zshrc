@@ -1,3 +1,6 @@
+autoload -Uz compinit
+compinit
+
 # starship
 eval "$(starship init zsh)"
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
@@ -10,17 +13,6 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # zsh-autosuggestions
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-# pyenv-virtualenv
-eval "$(pyenv virtualenv-init -)"
-
-# disable pyenv-virtualenv default prompt
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 
 # ----- fzf -----
 # Set up fzf key bindings and fuzzy completion
@@ -102,12 +94,19 @@ alias lg="lazygit"
 alias lzd="lazydocker"
 alias cz="chezmoi"
 
+# ----- direnv -----
+# hook config
+eval "$(direnv hook zsh)"
 
-# volta
+# ----- pixi -----
+eval "$(pixi completion --shell zsh)"
+
+# ----- volta -----
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 export VOLTA_FEATURE_PNPM=1 # pnpm 사용시 주석 해제
 
+# ----- SDKMAN -----
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
