@@ -38,8 +38,8 @@ return {
 				"kotlin_language_server",
 				"lua_ls",
 				"marksman",
-				"pyright",
 				"rust_analyzer",
+				"ruff",
 				"tailwindcss",
 				"taplo",
 				"ts_ls",
@@ -51,9 +51,6 @@ return {
 			ensure_installed = {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
-				"isort", -- python formatter
-				"black", -- python formatter
-				"pylint", -- python linter
 				"eslint_d", -- js linter
 			},
 		})
