@@ -1,0 +1,13 @@
+theme = Catppuccin Mocha
+
+font-family = FiraCode Nerd Font
+font-family = D2CodingLigature Nerd Font
+font-codepoint-map = U+AC00-U+D7A3=D2CodingLigature Nerd Font Mono
+font-size = 13
+font-thicken = true
+
+window-decoration = auto
+macos-titlebar-style = hidden
+macos-option-as-alt = true
+
+keybind = global:cmd+grave_accent=toggle_quick_terminal
