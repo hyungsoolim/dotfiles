@@ -71,5 +71,5 @@ git/
 github-copilot/
 gtk-3.0/
 karabiner/*/**
-raycast/
+raycast/*/**
 rclone/
