@@ -30,7 +30,9 @@ fpath=($HOME/.docker/completions $fpath)
 
 # Initialize completion
 autoload -Uz compinit
-compinit
+# save cache files to this directory
+# if there's no such dir, you have to make it
+compinit -d "$HOME/.cache/zsh/zcompdump"
 
 # ==========================================
 # 3. Tool Initializations
