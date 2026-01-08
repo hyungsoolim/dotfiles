@@ -10,4 +10,5 @@ window-decoration = auto
 macos-titlebar-style = hidden
 macos-option-as-alt = true
 
-keybind = global:cmd+grave_accent=toggle_quick_terminal
+# keybind = global:cmd+grave_accent=toggle_quick_terminal
+# keybind = shift+enter=text:\x1b\r

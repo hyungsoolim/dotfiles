@@ -9,7 +9,7 @@ return {
       bufferline.setup({
         options = {
           numbers = "buffer_id",
-          separator_style = "slant",
+		  -- separator_style = "slant",
           indicator = {
             style = "underline",
           },
