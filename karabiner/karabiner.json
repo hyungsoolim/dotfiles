@@ -32,6 +32,7 @@
                         ]
                     },
                     {
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "description": "Change caps_lock to command+control+option+shift.",
@@ -69,7 +70,7 @@
                                 "from": { "key_code": "caps_lock" },
                                 "parameters": {
                                     "basic.to_if_alone_threshold_milliseconds": 0,
-                                    "basic.to_if_held_down_threshold_milliseconds": 100
+                                    "basic.to_if_held_down_threshold_milliseconds": 50
                                 },
                                 "to_after_key_up": [
                                     {
@@ -307,6 +308,7 @@
                     {
                         "available_since": "12.6.9",
                         "description": "(Vim 2/11) finger on trackpad + any key -> off",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
@@ -3422,6 +3424,7 @@
                     },
                     {
                         "description": "(Vim 10/11) s,m,spacebar -> Hammerspoon modals",
+                        "enabled": false,
                         "manipulators": [
                             {
                                 "conditions": [
