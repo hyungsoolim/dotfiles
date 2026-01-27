@@ -1,0 +1,118 @@
+# Mole Cleanup Preview - 2026-01-21 13:49:32
+#
+# How to protect files:
+# 1. Copy any path below to ~/.config/mole/whitelist
+# 2. Run: mo clean --whitelist
+#
+# Example:
+#   /Users/*/Library/Caches/com.example.app
+#
+
+
+=== User essentials ===
+/Users/joselim/Library/Caches  # 31.81GB (83 items)
+/Users/joselim/Library/Logs  # 39.5MB (22 items)
+
+=== Finder metadata ===
+
+=== macOS system caches ===
+/Users/joselim/Library/Saved Application State  # 164KB (7 items)
+
+=== Sandboxed app caches ===
+
+=== Browsers ===
+/Users/joselim/Library/Caches/Google/Chrome  # 2.41GB (3 items)
+/Users/joselim/Library/Application Support/Google/Chrome/Profile 2/GPUCache  # 1.5MB (5 items)
+/Users/joselim/Library/Application Support/Google/Chrome/Profile 1/GPUCache  # 5.5MB (5 items)
+/Users/joselim/Library/Caches/company.thebrowser.Browser  # 7.3MB (4 items)
+/Users/joselim/Library/Caches/BraveSoftware/Brave-Browser  # 1.69GB (2 items)
+/Users/joselim/Library/Caches/Firefox/Profiles  # 1.13GB
+/Users/joselim/Library/Caches/com.kagi.kagimacOS  # 20.0MB (5 items)
+/Users/joselim/Library/Caches/zen/Profiles  # 1.15GB
+
+=== Cloud storage ===
+
+=== Office applications ===
+
+=== Developer tools ===
+/Users/joselim/Library/pnpm/store/v3  # 1.31GB
+/Users/joselim/.bun/install/cache  # 216.2MB (296 items)
+/Users/joselim/.cache/uv  # 3.60GB (8 items)
+/Users/joselim/.cargo/registry/cache/index.crates.io-1949cf8c6b5b557f  # 12.6MB
+/Users/joselim/.kube/cache  # 60.4MB (2 items)
+/Users/joselim/.gradle/caches  # 716.2MB (5 items)
+/Users/joselim/.gradle/daemon  # 165.9MB (4 items)
+/Users/joselim/.ivy2/cache  # 553.9MB (127 items)
+/Users/joselim/Library/Caches/com.postmanlabs.mac  # 80KB (2 items)
+/Users/joselim/Library/Caches/com.mongodb.compass  # 925KB (3 items)
+/Users/joselim/Library/Caches/com.figma.Desktop  # 241KB (3 items)
+/Users/joselim/Library/Caches/SentryCrash  # 20KB (5 items)
+/Users/joselim/Library/Caches/com.crashlytics.data/macos-wakatime.WakaTime  # 176KB
+/Users/joselim/Library/Application Support/Antigravity/Cache/Cache_Data  # 62.0MB
+/Users/joselim/Library/Application Support/Antigravity/Code Cache  # 16KB (2 items)
+/Users/joselim/Library/Application Support/Antigravity/GPUCache  # 5.5MB (5 items)
+/Users/joselim/Library/Application Support/Antigravity/DawnGraphiteCache  # 545KB (5 items)
+/Users/joselim/Library/Application Support/Antigravity/DawnWebGPUCache  # 545KB (5 items)
+/Users/joselim/Library/Application Support/Claude/Cache/Cache_Data  # 573.6MB
+/Users/joselim/Library/Application Support/Claude/Code Cache  # 165.2MB (2 items)
+/Users/joselim/Library/Application Support/Claude/GPUCache  # 545KB (5 items)
+/Users/joselim/Library/Application Support/Claude/DawnGraphiteCache  # 545KB (5 items)
+/Users/joselim/Library/Application Support/Claude/DawnWebGPUCache  # 545KB (5 items)
+/Users/joselim/Library/Application Support/Code/CachedData  # 31.5MB (3 items)
+/Users/joselim/Library/Application Support/Code/DawnGraphiteCache  # 545KB (5 items)
+/Users/joselim/Library/Application Support/Code/DawnWebGPUCache  # 545KB (5 items)
+/Users/joselim/Library/Application Support/Code/GPUCache  # 5.5MB (5 items)
+/Users/joselim/Library/Application Support/Code/CachedExtensionVSIXs  # 225.1MB (20 items)
+/Users/joselim/Library/Caches/Homebrew  # 5.93GB (330 items)
+
+=== Development applications ===
+/Users/joselim/Library/Caches/com.apple.dt.Xcode  # 441KB (4 items)
+/Users/joselim/Library/Developer/Xcode/DerivedData/Unsaved_Xcode_Document-azvefzdroifgdfceerjivmfacndl  # 20KB
+/Users/joselim/Library/Application Support/Code/logs  # 1.7MB (8 items)
+/Users/joselim/Library/Application Support/Code/Cache  # 115.9MB (2 items)
+/Users/joselim/Library/Application Support/Code/CachedData  # 31.5MB (3 items)
+/Users/joselim/Library/Caches/us.zoom.xos/WebKit  # 3.6MB
+/Users/joselim/Library/Caches/com.openai.chat  # 36.7MB (10 items)
+/Users/joselim/Library/Caches/com.anthropic.claudefordesktop  # 1.3MB (3 items)
+/Users/joselim/Library/Logs/Claude  # 4.8MB (11 items)
+/Users/joselim/Library/Caches/com.figma.Desktop  # 241KB (3 items)
+/Users/joselim/.lesshst  # 1KB
+/Users/joselim/Library/Caches/macos-wakatime.WakaTime  # 2.7MB (3 items)
+/Users/joselim/Library/Caches/notion.id  # 80KB (2 items)
+
+=== Virtual machine tools ===
+
+=== Application Support ===
+
+=== Uninstalled app data ===
+/Users/joselim/Library/Caches/com.axosoft.gitkraken.ShipIt  # 16KB
+/Users/joselim/Library/Caches/com.crashlytics.data  # 176KB
+/Users/joselim/Library/Caches/com.cron.electron.ShipIt  # 28KB
+/Users/joselim/Library/Caches/org.RedisLabs.RedisInsight-V2  # 80KB
+/Users/joselim/Library/Caches/org.RedisLabs.RedisInsight-V2.ShipIt  # 8KB
+/Users/joselim/Library/Caches/org.Zellij-Contributors.Zellij  # 38.1MB
+/Users/joselim/Library/Caches/org.freedesktop.thumbnails  # 60KB
+/Users/joselim/Library/Caches/org.swift.swiftpm  # 116KB
+/Users/joselim/Library/Caches/io.branch.network.cache  # 500KB
+/Users/joselim/Library/Caches/io.sentry  # 8KB
+/Users/joselim/Library/WebKit/com.kagi.kagimacOS  # 980KB
+/Users/joselim/Library/HTTPStorages/com.kagi.kagimacOS  # 60KB
+/Users/joselim/Library/HTTPStorages/com.kagi.kagimacOS.IconService  # 92KB
+/Users/joselim/Library/HTTPStorages/com.kagi.kagimacOS.IconService.binarycookies  # 2KB
+/Users/joselim/Library/HTTPStorages/com.kagi.kagimacOS.binarycookies  # 1KB
+/Users/joselim/Library/HTTPStorages/com.microsoft.autoupdate.fba  # 308KB
+/Users/joselim/Library/HTTPStorages/com.spotify.client.helper  # 64KB
+/Users/joselim/Library/HTTPStorages/org.RedisLabs.RedisInsight-V2  # 56KB
+
+=== Apple Silicon updates ===
+
+=== iOS device backups ===
+
+=== Time Machine incomplete backups ===
+
+# ============================================
+# Summary
+# ============================================
+# Potential cleanup: 52.91GB
+# Items: 1258
+# Categories: 73

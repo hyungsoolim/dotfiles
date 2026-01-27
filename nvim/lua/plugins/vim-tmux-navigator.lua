@@ -15,5 +15,9 @@ return {
       { "<c-l>", "<cmd><C-U>TmuxNavigateRight<cr>" },
       { "<c-\\>", "<cmd><C-U>TmuxNavigatePrevious<cr>" },
     },
+    init = function()
+      -- Disable navigation when tmux pane is zoomed
+      vim.g.tmux_navigator_disable_when_zoomed = 1
+    end,
   },
 }
