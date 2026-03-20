@@ -1,4 +1,6 @@
-theme = Catppuccin Mocha
+# theme = Catppuccin Mocha
+# theme = Nord
+theme = Zenbones Dark
 
 font-family = FiraCode Nerd Font
 font-family = D2CodingLigature Nerd Font
