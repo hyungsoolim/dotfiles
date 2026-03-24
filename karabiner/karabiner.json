@@ -3743,10 +3743,18 @@
                     "identifiers": {
                         "is_keyboard": true,
                         "is_pointing_device": true,
-                        "product_id": 2240,
-                        "vendor_id": 13364
+                        "product_id": 58513,
+                        "vendor_id": 13357
                     },
                     "ignore": false
+                },
+                {
+                    "identifiers": {
+                        "is_keyboard": true,
+                        "product_id": 58513,
+                        "vendor_id": 13357
+                    },
+                    "ignore": true
                 }
             ],
             "name": "Default profile",

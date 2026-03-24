@@ -257,6 +257,7 @@ format = '\[[$symbol$workspace]($style)\]'
 
 [time]
 format = '\[[$time]($style)\]'
+disabled = false
 
 [typst]
 format = '\[[$symbol($version)]($style)\]'
