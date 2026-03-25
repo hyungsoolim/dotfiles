@@ -1,6 +1,4 @@
-# theme = Catppuccin Mocha
-# theme = Nord
-theme = Zenbones Dark
+theme = Gruvbox Material Dark
 
 font-family = FiraCode Nerd Font
 font-family = D2CodingLigature Nerd Font
