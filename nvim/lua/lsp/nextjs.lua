@@ -1,5 +1,5 @@
 return {
-  { import = "lazyvim.plugins.extras.formatting.biome" },
+  { import = "lazyvim.plugins.extras.lang.typescript.biome" },
   {
     "mason-org/mason.nvim",
   },
