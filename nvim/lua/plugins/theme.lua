@@ -61,27 +61,27 @@ return {
   --   end,
   -- },
   -- github theme ------------------------------------------------------
-  -- {
-  --   "projekt0n/github-nvim-theme",
-  --   name = "github-theme",
-  --   lazy = false, -- make sure we load this during startup if it is your main colorscheme
-  --   priority = 1000, -- make sure to load this before all the other start plugins
-  --   config = function()
-  --     require("github-theme").setup({
-  --       options = {
-  --         dim_inactive = true,
-  --         styles = {
-  --           comments = "italic",
-  --           -- keywords = "bold",
-  --           types = "italic",
-  --           functions = "italic",
-  --         },
-  --       },
-  --     })
-  --
-  --     vim.cmd("colorscheme github_dark_dimmed")
-  --   end,
-  -- },
+  {
+    "projekt0n/github-nvim-theme",
+    name = "github-theme",
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      require("github-theme").setup({
+        options = {
+          dim_inactive = true,
+          styles = {
+            comments = "italic",
+            -- keywords = "bold",
+            types = "italic",
+            functions = "italic",
+          },
+        },
+      })
+
+      vim.cmd("colorscheme github_dark_dimmed")
+    end,
+  },
   -- gruvbox -----------------------------------------------------------
   -- {
   --   "ellisonleao/gruvbox.nvim",
@@ -148,31 +148,31 @@ return {
   --   end,
   -- },
   -- catppuccin -------------------------------------------------------------
-  {
-    "catppuccin/nvim",
-    name = "catppuccin",
-    lazy = false,
-    priority = 1000,
-    opts = {
-      flavour = "frappe",
-      transparent_background = true,
-      dim_inactive = {
-        enabled = true,
-      },
-      integrations = {
-        rainbow_delimeters = true,
-        indent_blankline = {
-          enabled = true,
-          scope_color = "",
-          colored_indent_levels = false,
-        },
-      },
-    },
-    config = function(_, opts)
-      local plugin = require("catppuccin")
-      plugin.setup(opts)
-
-      vim.cmd.colorscheme("catppuccin")
-    end,
-  },
+  -- {
+  --   "catppuccin/nvim",
+  --   name = "catppuccin",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {
+  --     flavour = "frappe",
+  --     transparent_background = true,
+  --     dim_inactive = {
+  --       enabled = true,
+  --     },
+  --     integrations = {
+  --       rainbow_delimeters = true,
+  --       indent_blankline = {
+  --         enabled = true,
+  --         scope_color = "",
+  --         colored_indent_levels = false,
+  --       },
+  --     },
+  --   },
+  --   config = function(_, opts)
+  --     local plugin = require("catppuccin")
+  --     plugin.setup(opts)
+  --
+  --     vim.cmd.colorscheme("catppuccin")
+  --   end,
+  -- },
 }

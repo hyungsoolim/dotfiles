@@ -7,11 +7,85 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "proxy": "",
+  "use_smartcase_search": true,
+  "search": {
+    "include_ignored": true,
+    "case_sensitive": true
+  },
+  "colorize_brackets": true,
+  "show_whitespaces": "selection",
+  "gutter": {
+    "line_numbers": true
+  },
+  "vim": {
+    "use_smartcase_find": true,
+    "use_system_clipboard": "always",
+    "toggle_relative_line_numbers": true
+  },
+  "minimap": {
+    "current_line_highlight": "all",
+    "thumb_border": "left_open",
+    "thumb": "always",
+    "show": "always"
+  },
+  "relative_line_numbers": "enabled",
+  "sticky_scroll": {
+    "enabled": true
+  },
+  "which_key": {
+    "enabled": true
+  },
+  "autosave": "off",
+  "cursor_blink": false,
+  "text_rendering_mode": "platform_default",
+  "ui_font_family": "Apple SD Gothic Neo",
+  "buffer_line_height": "comfortable",
+  "buffer_font_weight": 400.0,
+  "buffer_font_family": "Sarasa Term K Nerd Font",
+  "icon_theme": "Material Icon Theme",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "redact_private_values": true,
+  "agent_servers": {
+    "codex-acp": {
+      "type": "registry"
+    },
+    "claude-acp": {
+      "type": "registry"
+    }
+  },
+  "project_panel": {
+    "dock": "right"
+  },
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "agent": {
+    "default_model": {
+      "provider": "openai-subscribed",
+      "model": "gpt-5.5",
+      "enable_thinking": true,
+      "effort": "medium"
+    },
+    "dock": "left",
+    "favorite_models": [],
+    "model_parameters": []
+  },
+  "git_panel": {
+    "dock": "right"
+  },
+  "vim_mode": true,
   "ui_font_size": 16,
-  "buffer_font_size": 15,
+  "buffer_font_size": 14.0,
   "theme": {
     "mode": "system",
-    "light": "One Light",
-    "dark": "Carbonfox - opaque",
+    "light": "Catppuccin Latte",
+    "dark": "Catppuccin Mocha",
   },
 }
