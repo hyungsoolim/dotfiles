@@ -19,16 +19,13 @@ return {
         basedpyright = {
           enabled = true,
           -- pyproject.toml의 [tool.pyright] 설정을 자동으로 읽습니다.
-          -- basedpyright는 pyright의 포크이므로 호환됩니다.
           settings = {
             basedpyright = {
               analysis = {
+                autoImportCompletions = true,
                 autoSearchPaths = true,
-                diagnosticMode = "openFilesOnly",
+                diagnosticMode = "workspace",
                 useLibraryCodeForTypes = true,
-                -- 필요하다면 여기서 강제 설정을 할 수 있지만,
-                -- 님의 경우 pyproject.toml에 다 있어서 비워도 됩니다.
-                -- typeCheckingMode = "standard",
               },
             },
           },
@@ -36,8 +33,6 @@ return {
 
         -- 3. Ruff 설정 (Linting & Formatting)
         ruff = {
-          -- Ruff도 pyproject.toml의 [tool.ruff]를 자동 인식합니다.
-          -- VSCode의 "source.organizeImports.ruff" 기능을 위해 키매핑 추가
           keys = {
             {
               "<leader>co",
@@ -57,17 +52,17 @@ return {
       },
     },
   },
-  -- 4. 저장할 때 자동으로 Organize Imports 실행 (VSCode 동작 재현)
-  -- 원하지 않으면 이 블록은 빼셔도 됩니다.
+
+  -- 4. 저장 시 Ruff로 Organize Imports 자동 실행
+  -- init은 opts 머지를 깨지 않으면서 플러그인 로드 전에 실행됨.
   {
     "neovim/nvim-lspconfig",
-    opts = function(_, opts)
+    opts = function()
       vim.api.nvim_create_autocmd("BufWritePre", {
         pattern = "*.py",
         callback = function(args)
-          -- Ruff LSP가 붙어있을 때만 실행
-          local client = vim.lsp.get_active_clients({ name = "ruff", bufnr = args.buf })[1]
-          if client then
+          local clients = vim.lsp.get_clients({ name = "ruff", bufnr = args.buf })
+          if #clients > 0 then
             vim.lsp.buf.code_action({
               apply = true,
               context = {

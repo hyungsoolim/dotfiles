@@ -3,16 +3,18 @@ return {
     "akinsho/bufferline.nvim",
     version = "*",
     dependencies = "nvim-tree/nvim-web-devicons",
-    config = function(_, opts)
-      local bufferline = require("bufferline")
-
-      bufferline.setup({
+    -- after = "catppuccin",
+    config = function()
+      require("bufferline").setup({
         options = {
           numbers = "buffer_id",
+          -- hightlights = require("catppuccin.special.bufferline").get_theme(),
           -- separator_style = "slant",
           indicator = {
+            icon = "▎", -- this should be omitted if indicator style is not 'icon'
             style = "underline",
           },
+          separator_style = "thick",
           diagnostics = "nvim_lsp",
           diagnostics_indicator = function(count, level, diagnostics_dict, context)
             local s = " "

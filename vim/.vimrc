@@ -18,10 +18,15 @@ Plug 'christoomey/vim-tmux-navigator'
 " Enable . repeat for plugin commands (works with vim-surround, etc.)
 Plug 'tpope/vim-repeat'
 
-" Catppuccin colorscheme (optional, for consistent look with neovim)
 Plug 'catppuccin/vim', { 'as': 'catppuccin' }
 
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
 call plug#end()
+
+let g:airline_theme='catppuccin_mocha'
+colorscheme catppuccin_mocha
 
 " === General ===
 set nocompatible              " Disable Vi compatibility, enable Vim features
@@ -66,6 +71,8 @@ set hidden                    " Allow switching buffers without saving
 set nowrap                    " Don't wrap long lines (better for code)
 set updatetime=250            " Faster CursorHold events (default 4000ms)
 set ttimeoutlen=10            " Reduce key code delay (faster Esc response)
+set noshowmode                " Hide default mode indicator (airline shows it)
+set shortmess+=F              " Hide file info message when opening files
 
 " === Encoding ===
 set encoding=utf-8            " Internal encoding
@@ -74,7 +81,7 @@ set fileencoding=utf-8        " File encoding when writing
 " === Colorscheme ===
 set termguicolors             " Enable 24-bit RGB colors in terminal
 set background=dark           " Use dark variant of colorscheme
-silent! colorscheme catppuccin_mocha  " Apply colorscheme (silent! ignores error if not installed)
+" silent! colorscheme catppuccin_mocha  " Apply colorscheme (silent! ignores error if not installed)
 
 " === Keymaps ===
 let mapleader = " "           " Set leader key to space

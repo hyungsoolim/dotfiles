@@ -1,0 +1,13 @@
+html, body, #__next, main {
+  min-height: 100vh;
+  margin: 0;
+}
+
+#page-ctn {
+  margin: 0 auto !important;
+  max-width: 90vw !important;
+}
+
+.markdown-body {
+  max-width: none !important;
+}

@@ -10,12 +10,7 @@ return {
             exclude = { ".git", "node_modules", "__pycache__" },
             win = {
               list = {
-                keys = {
-                  ["<c-v>"] = false,
-                  ["<c-s>"] = false,
-                  ["|"] = "edit_vsplit",
-                  ["-"] = "edit_split",
-                },
+                keys = {},
               },
             },
           },

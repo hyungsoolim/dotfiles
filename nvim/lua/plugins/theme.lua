@@ -8,6 +8,9 @@ return {
   --     -- Optionally configure and load the colorscheme
   --     -- directly inside the plugin declaration.
   --     vim.g.gruvbox_material_enable_italic = true
+  --     vim.g.gruvbox_material_forground = "original"
+  --     vim.g.gruvbox_material_enable_bold = true
+  --     vim.g.gruvbox_material_statusline_style = "original"
   --     vim.cmd.colorscheme("gruvbox-material")
   --   end,
   -- },
@@ -22,7 +25,6 @@ return {
   --     require("everforest").setup({
   --       -- ── 배경 밝기 ───────────────────────────────────────────
   --       background = "hard", -- "soft" | "medium" | "hard"
-  --       -- hard 추천 (nord처럼 흐릿한 거 싫으셨으니)
   --
   --       -- ── 투명 배경 ───────────────────────────────────────────
   --       transparent_background_level = 0,
@@ -104,7 +106,7 @@ return {
   --     contrast = "", -- can be "hard", "soft" or empty string
   --     palette_overrides = {},
   --     overrides = {},
-  --     dim_inactive = true,
+  --     -- dim_inactive = true,
   --     transparent_mode = false,
   --   },
   --   config = function(_, opts)
@@ -114,22 +116,63 @@ return {
   --   end,
   -- },
   -- nightfox -------------------------------------------------------------
+  -- {
+  --   "EdenEast/nightfox.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     local groups = {
+  --       carbonfox = {
+  --         LspReferenceText = { bg = "sel1", style = "bold" },
+  --         LspReferenceRead = { bg = "sel1", style = "bold" },
+  --         LspReferenceWrite = { bg = "sel1", style = "bold" },
+  --       },
+  --       nordfox = {
+  --         LspReferenceText = { bg = "sel1", style = "bold" },
+  --         LspReferenceRead = { bg = "sel1", style = "bold" },
+  --         LspReferenceWrite = { bg = "sel1", style = "bold" },
+  --       },
+  --     }
+  --     require("nightfox").setup({
+  --       options = {
+  --         dim_inactive = true,
+  --         styles = {
+  --           comments = "italic",
+  --           types = "italic",
+  --         },
+  --       },
+  --       groups = groups,
+  --     })
+  --
+  --     vim.cmd("colorscheme nordfox")
+  --   end,
+  -- },
+  -- catppuccin -------------------------------------------------------------
   {
-    "EdenEast/nightfox.nvim",
+    "catppuccin/nvim",
+    name = "catppuccin",
     lazy = false,
     priority = 1000,
-    config = function()
-      require("nightfox").setup({
-        options = {
-          dim_inactive = true,
-          styles = {
-            comments = "italic",
-            types = "italic",
-          },
+    opts = {
+      flavour = "frappe",
+      transparent_background = true,
+      dim_inactive = {
+        enabled = true,
+      },
+      integrations = {
+        rainbow_delimeters = true,
+        indent_blankline = {
+          enabled = true,
+          scope_color = "",
+          colored_indent_levels = false,
         },
-      })
+      },
+    },
+    config = function(_, opts)
+      local plugin = require("catppuccin")
+      plugin.setup(opts)
 
-      vim.cmd("colorscheme carbonfox")
+      vim.cmd.colorscheme("catppuccin")
     end,
   },
 }

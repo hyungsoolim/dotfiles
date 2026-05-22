@@ -1,15 +1,13 @@
 # ==========================================
 # 1. Environment Variables & PATH (가장 먼저!)
 # ==========================================
+export LANG=ko_KR.UTF-8
 
 # Go
 export PATH=$PATH:$HOME/go/bin
 
 # Krew
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-
-# Bat (Better cat) theme
-export BAT_THEME=catppuccin-mocha
 
 # Starship config path
 export STARSHIP_CONFIG=~/.config/starship/starship.toml
@@ -26,7 +24,8 @@ export DIRENV_LOG_FORMAT=""
 
 # Docker CLI completions
 # (반드시 compinit보다 위에 있어야 함)
-fpath=($HOME/.docker/completions $fpath)
+fpath=(/Users/hyungsoolim/.docker/completions $fpath)
+# fpath=($HOME/.docker/completions $fpath)
 
 # Initialize completion
 autoload -Uz compinit
@@ -87,14 +86,6 @@ function y() {
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-# FZF Color Theme
-export FZF_DEFAULT_OPTS=" \
---color=bg+:#313244,bg:#1e1e2e,spinner:#f5e0dc,hl:#f38ba8 \
---color=fg:#cdd6f4,header:#f38ba8,info:#cba6f7,pointer:#f5e0dc \
---color=marker:#b4befe,fg+:#cdd6f4,prompt:#cba6f7,hl+:#f38ba8 \
---color=selected-bg:#45475a \
---multi"
-
 # Use fd instead of find
 export FZF_DEFAULT_COMMAND="fd --hidden --strip-cwd-prefix"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
@@ -136,8 +127,13 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # zsh-syntax-highlighting (이건 autosuggestions보다 뒤에 있는 게 좋습니다)
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# ==========================================
-# 7. SDKMAN (Must be at the very end)
-# ==========================================
-export SDKMAN_DIR="$HOME/.sdkman"
-[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+# bun completions
+[ -s "/Users/hyungsoolim/.bun/_bun" ] && source "/Users/hyungsoolim/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/hyungsoolim/.sdkman"
+[[ -s "/Users/hyungsoolim/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/hyungsoolim/.sdkman/bin/sdkman-init.sh"

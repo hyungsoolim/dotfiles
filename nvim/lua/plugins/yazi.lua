@@ -32,8 +32,14 @@ return {
     open_for_directories = false,
     keymaps = {
       show_help = "<f1>",
-      open_file_in_vertical_split = "|",
-      open_file_in_horizontal_split = "-",
+      open_file_in_vertical_split = "<c-v>",
+      open_file_in_horizontal_split = "<c-s>",
+      grep_in_directory = "<c-f>",
+    },
+    integrations = {
+      grep_in_directory = "snacks.picker",
+      grep_in_selected_files = "snacks.picker",
+      picker_add_copy_relative_path_action = "snacks.picker",
     },
   },
   -- 👇 if you use `open_for_directories=true`, this is recommended

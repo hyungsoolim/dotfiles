@@ -1,0 +1,12 @@
+[[plugin.deps]]
+use = "yazi-rs/plugins:git"
+rev = "442d908"
+hash = "6849444b7c2df08eace83f3f86fb55a3"
+
+[[plugin.deps]]
+use = "yazi-rs/plugins:chmod"
+rev = "442d908"
+hash = "f0c8c378184d5f8abd1b095a443d336d"
+
+[flavor]
+deps = []
