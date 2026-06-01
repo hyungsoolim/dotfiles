@@ -7,6 +7,7 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "helix_mode": true,
   "proxy": "",
   "use_smartcase_search": true,
   "search": {
@@ -80,12 +81,12 @@
   "git_panel": {
     "dock": "right"
   },
-  "vim_mode": true,
+  "vim_mode": false,
   "ui_font_size": 16,
   "buffer_font_size": 14.0,
   "theme": {
     "mode": "system",
     "light": "Catppuccin Latte",
-    "dark": "Catppuccin Mocha",
+    "dark": "GitHub Dark Dimmed",
   },
 }

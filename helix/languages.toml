@@ -1,0 +1,48 @@
+[[language]]
+name = "python"
+language-servers = ["basedpyright", "ruff"]
+auto-format = true
+
+[language-server.vtsls]
+command = "vtsls"
+args = ["--stdio"]
+
+[language-server.eslint]
+command = "vscode-eslint-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "typescript"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "eslint"
+]
+formatter = { command = "prettier", args = ["--stdin-filepath", "%{buffer_name}"] }
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "eslint"
+]
+formatter = { command = "prettier", args = ["--stdin-filepath", "%{buffer_name}"] }
+auto-format = true
+
+[[language]]
+name = "javascript"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "eslint"
+]
+formatter = { command = "prettier", args = ["--stdin-filepath", "%{buffer_name}"] }
+auto-format = true
+
+[[language]]
+name = "jsx"
+language-servers = [
+  { name = "vtsls", except-features = ["format"] },
+  "eslint"
+]
+formatter = { command = "prettier", args = ["--stdin-filepath", "%{buffer_name}"] }
+auto-format = true

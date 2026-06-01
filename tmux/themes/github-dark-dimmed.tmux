@@ -5,7 +5,7 @@ set -g mode-style "fg=#22272e,bg=#adbac7"
 set -g message-style "fg=#22272e,bg=#adbac7"
 set -g message-command-style "fg=#22272e,bg=#adbac7"
 
-set -g pane-border-style "fg=#3d444d"
+set -g pane-border-style "fg=#444c56"
 set -g pane-active-border-style "fg=#539bf5"
 
 set -g status "on"
