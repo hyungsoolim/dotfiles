@@ -1,0 +1,62 @@
+onboarding = false
+
+[ui.toast]
+delivery = "off"
+
+[ui]
+show_agent_labels_on_pane_borders = true
+agent_panel_sort = "spaces"
+confirm_close = true
+copy_on_select = false
+
+status_indicators = "symbols"
+[theme]
+name = "terminal"
+auto_switch = false
+
+[keys]
+prefix = "ctrl+a"
+focus_pane_left = ["prefix+h"]
+focus_pane_down = ["prefix+j"]
+focus_pane_up = ["prefix+k"]
+focus_pane_right = ["prefix+l"]
+previous_tab = ["prefix+p", "ctrl+["]
+next_tab = ["prefix+n", "ctrl+]"]
+split_horizontal = ["prefix+s"]
+settings = ["prefix+,"]
+
+# new_tab = ["prefix+c", "ctrl+c"]
+# split_vertical = ["prefix+v", "ctrl+d"]
+# split_horizontal = ["prefix+minus", "ctrlshift+d"]
+# zoom = ["prefix+z", "ctrl+z"]
+
+# vim-herdr-navigation: ctrl+h/j/k/l forwards to Vim's own split navigation
+# when Vim is the foreground process, otherwise moves herdr's pane focus
+# directly (same as focus_pane_* above, which is why ctrl+h/j/k/l was
+# removed from those bindings to avoid a duplicate binding).
+[[keys.command]]
+key = "ctrl+h"
+type = "plugin_action"
+command = "vim-herdr-navigation.left"
+description = "navigate left (vim/herdr)"
+
+[[keys.command]]
+key = "ctrl+j"
+type = "plugin_action"
+command = "vim-herdr-navigation.down"
+description = "navigate down (vim/herdr)"
+
+[[keys.command]]
+key = "ctrl+k"
+type = "plugin_action"
+command = "vim-herdr-navigation.up"
+description = "navigate up (vim/herdr)"
+
+[[keys.command]]
+key = "ctrl+l"
+type = "plugin_action"
+command = "vim-herdr-navigation.right"
+description = "navigate right (vim/herdr)"
+
+[experimental]
+switch_ascii_input_source_in_prefix = false

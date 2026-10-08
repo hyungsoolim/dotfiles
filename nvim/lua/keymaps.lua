@@ -32,7 +32,7 @@ local xmap_leader = function(suffix, rhs, desc)
 end
 
 -- vim.keymap.set("x", "p", [["_dP]], { desc = "Paste over selection without losing yanked text" })
-nvmap_leader("d", '[["_d]]', "Delete without yanking" )
+nvmap_leader("d", [["_d]], "Delete without yanking" )
 
 nmap("<C-c>", ":nohl<CR>", "Clear search highlighting")
 
